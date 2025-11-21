@@ -1,0 +1,55 @@
+
+include ./colors.swaycfg
+
+# =============================================================================
+# Idle and Sleep
+# =============================================================================
+
+exec swayidle -w \
+         timeout 300 'swaylock -f -c 000000' \
+         timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+         before-sleep 'swaylock -f -c 000000'
+
+# =============================================================================
+# Background
+# =============================================================================
+
+output * bg $HOME/Other/Wallpaper/ylia.webp fill
+
+# =============================================================================
+# Bar
+# =============================================================================
+
+bar {
+    position top
+    status_command i3status
+    colors {
+        background         $base
+        statusline         $text
+        focused_statusline $text
+        focused_separator  $base
+
+        # target           border bg        text
+        focused_workspace  $base  $light    $base
+        active_workspace   $base  $gray     $text
+        inactive_workspace $base  $base     $text
+        urgent_workspace   $text  $red      $base
+    }
+}
+
+# =============================================================================
+# Wmenu
+# =============================================================================
+
+bindsym $mod+o exec $HOME/.config/sway/menu/wmenu-desktop-menu
+bindsym $mod+p exec wmenu-run
+bindsym $mod+i exec $HOME/.config/sway/menu/wmenu-menus
+
+# =============================================================================
+# Theming
+# =============================================================================
+
+# target                 title     bg    text   indicator  border
+client.focused           $text     $base $text  $red      $text
+client.background        $base
+
