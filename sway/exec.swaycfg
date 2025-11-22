@@ -1,3 +1,4 @@
 
 exec owncloud
 exec blueman-applet
+exec nm-applet

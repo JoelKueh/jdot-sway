@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
-lines="-l 3"
+lines="-l 4"
 font="-fn Inconsolata-15"
 colors="-nb #2C323E -nf #9899a0 -sb #BF616A -sf #2C323E"
 
 first_prompt="Pick an Option:"
-opt1="Exit Sway\nReboot\nShut Down"
+opt1="Suspend\nExit Sway\nReboot\nShut Down"
 opt2="Yes\nNo"
 
 ask() {
@@ -15,6 +15,10 @@ ask() {
 ask "$opt1" "$first_prompt"
 
 case $answer in
+    "Suspend")
+        systemctl suspend
+        exit 0
+        ;;
     "Exit Sway")
         ask "$opt2" "Are you sure you want to exit sway?"
         if [[ $answer == "Yes" ]]; then
