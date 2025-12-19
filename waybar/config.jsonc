@@ -9,7 +9,7 @@
     "margin-left": 2,
 
     "modules-left": [
-        "hyprland/workspaces",
+        "sway/workspaces",
         "tray"
     ],
 
@@ -26,7 +26,7 @@
         "pulseaudio"
     ],
 
-    "hyprland/workspaces": {
+    "sway/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
         "tooltip": false
