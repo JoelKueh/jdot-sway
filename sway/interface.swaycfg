@@ -21,8 +21,8 @@ output * bg $HOME/Other/Wallpaper/ylia.webp fill
 # =============================================================================
 
 bar {
+    swaybar_command waybar
     position top
-    status_command i3status
     colors {
         background         $base
         statusline         $text
