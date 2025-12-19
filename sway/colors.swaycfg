@@ -1,8 +1,13 @@
 
-set $base #181818
-set $text #CCCCCC
+set $base #1d2021
+set $border #3c3836
+set $text #303536
 
-set $red #AA2222
+set $foc_bg #303536
+set $foc_border #d4be98
+set $foc_text #d4be98
+
+set $red #e78a4e
 
 set $gray #444444
-set $light #AAAAAA
+set $light #3c3836
