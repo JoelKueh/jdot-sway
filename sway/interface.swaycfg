@@ -55,4 +55,5 @@ client.focused      $foc_border $foc_bg $foc_text   $red        $foc_border
 client.background   $base
 
 default_border pixel 2
+gaps inner 2
 
